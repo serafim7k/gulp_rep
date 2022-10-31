@@ -22,3 +22,12 @@ $bg: #f6f6f6;
  font-family: 'Roboto-Regular', sans-serif;
  font-weight: 400;
 }
+
+%btm{
+    padding: 12px 26px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $accent;
+    box-shadow: 0px 7px 20px 0px rgba(255,17,48,0.3);
+    @extend %roboto-400;
+}
