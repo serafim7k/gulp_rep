@@ -173,3 +173,9 @@ input,
 select {
  vertical-align: middle;
 }
+
+*,
+::after,
+::before{
+    box-sizing: border-box;
+}

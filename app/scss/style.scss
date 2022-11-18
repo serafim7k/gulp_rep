@@ -184,7 +184,8 @@ padding: 40px 0;
     background-image: url('../images/slider/bg-shape.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: $bg;
+    // min-height: 100vh;
+    // background-color: $bg;
     padding-top: 65px;
     &__container{
         max-width: 1560px;
@@ -255,7 +256,86 @@ padding: 40px 0;
 }
 
 
+.categories-info{
+    padding: 120px 0;
+    background-image: url('../images/decor/bgshapes.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 
+.info{
+    display: flex;
+    justify-content: space-between;
+    // max-width: 450px;
+    margin-bottom: 110px;
+    &_item{
+        padding: 60px 30px;
+        width: 370px;
+        box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+    }
+    &_item-title{
+        margin: 35px 0 10px;
+        color: $title;
+        font-size: 22px;
+        @extend %roboto-400;
+    }
+}
+
+.categories{
+    &__items{
+        display: grid;
+        min-height: 635px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+    &__item{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        padding-top: 35px;
+        padding-left: 40px;
+        &:nth-child(1){
+            grid-row: span 2;
+            .categories__item-subtitle,
+            .categories__link:hover{
+                color: #5800e4;
+            }
+        }
+        &:nth-child(2){
+            grid-column: span 2;
+            .categories__item-subtitle,
+            .categories__link:hover{
+                color: $accent;
+            }
+        }
+        &:nth-child(3){
+            .categories__item-subtitle,
+            .categories__link:hover{
+                color: #ffb534;
+            }
+        }
+        &:nth-child(4){
+            .categories__item-subtitle,
+            .categories__link:hover{
+                color: #34c3ff;
+            }
+        }
+    }
+    &__item-subtitle{
+        margin-bottom: 5px;
+    }
+    &__item-title{
+        font-size: 22px;
+        color: $title;
+        margin-bottom: 16px;
+    }
+    &__link{
+        text-transform: uppercase;
+        color: $title;
+        @extend %roboto-400;
+    }
+}
 
 // @import 'media';
 
