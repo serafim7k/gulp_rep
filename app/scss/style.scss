@@ -268,7 +268,11 @@ padding: 40px 0;
     justify-content: space-between;
     // max-width: 450px;
     margin-bottom: 110px;
+    position: relative;
     &_item{
+        position: relative;
+        z-index: 1;
+        background-color: #fff;
         padding: 60px 30px;
         width: 370px;
         box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
@@ -282,7 +286,8 @@ padding: 40px 0;
     &::before,
     &::after{
         content: "";
-        position: relative;
+        position: absolute;
+        z-index: -1;
     }
     &::before{
         background-image: url('../images/decor/circle.svg');
@@ -293,10 +298,10 @@ padding: 40px 0;
     }
     &::after{
         background-image: url('../images/decor/rectangle.svg');
-        bottom: 0px;
-        right: 0px;
-        width: 120px;
-        height: 121px;  
+        bottom: -22px;
+        right: -24px;
+        width: 65px;
+        height: 52px;  
     }
 }
 
@@ -309,9 +314,6 @@ padding: 40px 0;
         grid-gap: 30px;
     }
     &__item{
-        position: relative;
-        z-index: 1;
-        background-color: #fff;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
