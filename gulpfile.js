@@ -35,7 +35,9 @@ function scripts() {
  return src ([
   'node_modules/jquery/dist/jquery.js',
   'node_modules/slick-carousel/slick/slick.js',
-  'app/js/main.js'
+  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+  'node_modules/rateyo/src/jquery.rateyo.js',
+  'app/js/main.js',
  ])
 
  .pipe(concat('main.min.js'))
